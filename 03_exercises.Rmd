@@ -20,7 +20,7 @@ library(tidyverse)     # for graphing and data cleaning
 library(gardenR)       # for Lisa's garden data
 library(lubridate)     # for date manipulation
 library(ggthemes)      # for even more plotting themes
-library(geofacet)      # for special faceting with US map layout
+#library(geofacet)      # for special faceting with US map layout
 theme_set(theme_minimal())       # My favorite ggplot() theme :)
 ```
 
@@ -163,6 +163,7 @@ Here is the code to read in the data. We do this a little differently than usual
 ```{r cache=TRUE}
 data_site <- 
   "https://www.macalester.edu/~dshuman1/data/112/2014-Q4-Trips-History-Data.rds" 
+
 Trips <- readRDS(gzcon(url(data_site)))
 Stations<-read_csv("http://www.macalester.edu/~dshuman1/data/112/DC-Stations.csv")
 ```
@@ -330,6 +331,6 @@ This problem uses the data from the Tidy Tuesday competition this week, `kids`. 
 
   21. In this exercise, you are going to try to replicate the graph below, created by Georgios Karamanis. I'm sure you can find the exact code on GitHub somewhere, but **DON'T DO THAT!** You will only be graded for putting an effort into this problem. So, give it a try and see how far you can get without doing too much googling. HINT: use `facet_geo()`. The graphic won't load below since it came from a location on my computer. So, you'll have to reference the original html on the moodle page to see it.
   
-![](kids_data_karamanis.jpeg)
+
 
 **DID YOU REMEMBER TO UNCOMMENT THE OPTIONS AT THE TOP?**
