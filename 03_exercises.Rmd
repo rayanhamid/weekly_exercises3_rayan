@@ -97,10 +97,18 @@ garden_harvest %>%
 
 ```
 
+
+```{r}
+#There are more rows in the combined data in comparison to the garden_harvest as well as some  missing values. TMissing values could be because left_join output all cases from garden_harvest even if it doesn’t have a match on garden_planting. To fix this, we can use the inner_join(). More rows could be because vegetables are harvested in more than one plot, meaning a row for each plot. This will happen every time that vegetable variety is harvested. To fix this, we can create a new data set ’plant_min_date’that summarizes for each vegetable and variety and then calculates which one was harvested first. 
+```
+
+
+
   3. I would like to understand how much money I "saved" by gardening, for each vegetable type. Describe how I could use the `garden_harvest` and `garden_spending` datasets, along with data from somewhere like [this](https://products.wholefoodsmarket.com/search?sort=relevance&store=10542) to answer this question. You can answer this in words, referencing various join functions. You don't need R code but could provide some if it's helpful.
   
+  
 ```{r}
-#
+#The garden_harvest and inner_join()  with garden_spendingand store it in a new data set (data 1). Data could then be collected to find the price of a pound of organic vegetable would cost in the market (for example using the link above)(data 2). You then join this data (data 2) with previous data you created(data 1). Then create a new variable (price_diff = market_price_with_tax - price_with_tax) and the sum of this variable(price_diff) could give you how much you saved.
 ```
   
 
@@ -324,6 +332,8 @@ Trip_w_date <- Trips %>%
 ## GitHub link
 
   20. Below, provide a link to your GitHub page with this set of Weekly Exercises. Specifically, if the name of the file is 03_exercises.Rmd, provide a link to the 03_exercises.md file, which is the one that will be most readable on GitHub.
+
+(https://github.com/rayanhamid/weekly_exercises3_rayan/blob/main/03_exercises.Rmd)
 
 ## Challenge problem! 
 
